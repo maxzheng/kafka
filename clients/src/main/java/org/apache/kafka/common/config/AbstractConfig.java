@@ -241,7 +241,7 @@ public class AbstractConfig {
      * Gets all original settings with the given prefix, stripping the prefix before adding it to the output.
      *
      * @param prefix the prefix to use as a filter
-     * @return a Map containing the settings with the prefix
+     * @return a Map containing the settings without the prefix
      */
     public Map<String, Object> originalsWithPrefix(String prefix) {
         return originalsWithPrefix(prefix, true);
@@ -252,7 +252,7 @@ public class AbstractConfig {
      *
      * @param prefix the prefix to use as a filter
      * @param strip strip the prefix before adding to the output if set true
-     * @return a Map containing the settings with the prefix
+     * @return a Map containing the settings with or without the prefix
      */
     public Map<String, Object> originalsWithPrefix(String prefix, boolean strip) {
         Map<String, Object> result = new RecordingMap<>(prefix, false);
